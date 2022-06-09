@@ -1,0 +1,238 @@
+@media screen and (max-width: 1023px) {
+  
+.logo{
+  width: 80px;
+  height: auto;
+}
+
+  .grid__h2{
+    font-size: 20px;
+  }
+  .img1{
+    width: 100%;
+    height: 100%;
+  }
+    .grid {
+      border: 4px solid black;
+      display: grid;
+      background-color: azure;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto;
+      font-style: italic;
+      grid-template-areas: 
+      "foto1 foto2"
+     "foto3 foto3"
+     "foto5 foto6"
+     "foto4 foto7"
+     "foto8 foto9";
+      justify-content:center;
+    }
+    
+    .grid__hijo--1 {
+      grid-area: foto1;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+    }
+    
+    .grid__hijo--2 {
+      grid-area: foto2;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+    }
+    
+    .grid__hijo--3 {
+      grid-area: foto3;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+    }
+    
+    .grid__hijo--4 {
+      grid-area: foto4;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+    }
+    
+    .grid__hijo--5 {
+      grid-area: foto5;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+    }
+    
+    .grid__hijo--6 {
+      grid-area: foto6;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+    }
+    .grid__hijo--7 {
+      grid-area: foto7;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+    }
+    .grid__hijo--8 {
+      grid-area: foto8;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+    }
+    
+    .grid__hijo--9 {
+      grid-area: foto9;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+    }
+  }
+
+ 
+  
+  @media screen and (max-width: 600px) {
+    .header {
+      background-color: palevioletred;
+      font-size: 10px;
+    }
+    .header__elementoh1{
+      display: none;
+    }
+  
+
+    .jam-menu{
+      display: block;
+      font-size: 30px;
+    position: fixed;
+    }
+    .main h3{
+      display: none;
+    }
+  .text-decoration-underline{
+    display: none;
+  }
+  .lead{
+    display: none;
+  }
+
+
+    div span {
+      display: flex;
+      display: inline;
+      justify-self: center;
+    }
+    .subtitulos {
+      display: none;
+    }
+    .subtitulos__2 {
+      font-size: 30px;
+    }
+    .subtitulos_parrafo{
+      font-size: 15px;
+    }
+    .Subtitulos__fabrica--ubicacion{
+      font-size: 20px;
+    }
+    .main h2 {
+      display: none;
+    }
+    .main{
+      display: none;
+    }
+    .grid {
+      border: 4px solid black;
+      display: grid;
+      background-color: azure;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(9, 1fr);
+      font-style: italic;
+      grid-template-areas: 
+      "foto1"
+      "foto2"
+      "foto3"
+      "foto4"
+      "foto5"
+      "foto6"
+      "foto7"
+      "foto8"
+      "foto9";
+      object-fit: cover;
+    
+    }
+    
+    .grid__hijo--1 {
+      grid-area: foto1;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .grid__hijo--2 {
+      grid-area: foto2;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    .grid__hijo--3 {
+      grid-area: foto3;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    .grid__hijo--4 {
+      grid-area: foto4;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    .grid__hijo--5 {
+      grid-area: foto5;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    .grid__hijo--6 {
+      grid-area: foto6;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .grid__hijo--7 {
+      grid-area: foto7;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .grid__hijo--8 {
+      grid-area: foto8;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    .grid__hijo--9 {
+      grid-area: foto9;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+   
+    .footer {
+      font-size: 20px;
+      border-style: double;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      margin-top: 40px;
+      position: relative;
+    }
+  }
+ 
+  /*# sourceMappingURL=style.css.map */
+  

@@ -1,0 +1,11 @@
+Se adecuaron todas las páginas, se agrego un carousel en la página de promociones , mapa en la página de contacto, se agrego un formulario de bootstrap en la página de inciiar sesión, etc.
+Se borraron todos los lorem y se puso relleno en los textos.
+Se acomodaron los titulos.
+Se acomodo el orden del logo según lo sugerido por el tutor.
+Se eliminaron los margenes del logo con la propiedad margin=unset y se redujo el logo con las siguentes propiedades  width: 50px y height: 50px.
+Agregue propiedades en la media queries de @media screen and (max-width: 600px) pero no se me ven reflejados los cambios .nav, grid y los cambios de color en las letras del nav.
+Genere un for y un if en la seccion de variables. El for lo pense para que genere las clases de los grid hijos.
+Se agregaron las etiquetas meta a las 5 páginas.
+
+
+
