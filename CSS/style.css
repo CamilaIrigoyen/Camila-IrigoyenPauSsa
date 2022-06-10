@@ -195,12 +195,12 @@ main {
 .footer {
   font-size: 20px;
   border-style: double;
-  display: flex;
   flex-direction: column;
   margin-top: 40px;
   position: relative;
   background-color: pink;
-  justify-content: center;;
+  justify-content: center;
+  text-align: center;
 }
 
 .footer_form {
