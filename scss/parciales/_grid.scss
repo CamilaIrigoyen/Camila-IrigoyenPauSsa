@@ -23,9 +23,8 @@
    "foto3 foto9 foto4"
    "foto5 foto6 foto8";
     justify-content: center;
-    gap: 10px;
+    gap: 10px;}
   
-  }
   
   .grid__hijo--1 {
     grid-area: foto1;
@@ -81,11 +80,9 @@
     height: 200px;
     overflow: hidden;
   }
-  
   .grid__hijo--9 {
     grid-area: foto9;
     width: 200px;
     height: 200px;
     overflow: hidden;
   }
-  
