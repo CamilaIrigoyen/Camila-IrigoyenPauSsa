@@ -199,6 +199,7 @@ main {
   flex-direction: column;
   margin-top: 40px;
   position: relative;
+  background-color: pink;
 }
 
 .footer_form {
@@ -397,7 +398,6 @@ main {
     border-style: double;
     display: flex;
     flex-direction: column;
-    text-decoration: none;
     margin-top: 40px;
     position: relative;
   }
