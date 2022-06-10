@@ -200,6 +200,7 @@ main {
   margin-top: 40px;
   position: relative;
   background-color: pink;
+  justify-content: center;;
 }
 
 .footer_form {
