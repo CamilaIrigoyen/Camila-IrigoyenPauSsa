@@ -141,7 +141,7 @@
   padding: 15px;
 }
 
-.Subtitulos__fabrica--ubicacion {
+.subtitulos__fabrica--ubicacion {
   text-align: center;
   font-size: 25px;
   padding: 15px;
@@ -173,6 +173,11 @@ h4 {
   text-align: center;
 }
 
+.img2 {
+  width: 100px;
+  height: 100px;
+}
+
 main {
   padding-top: 20px;
 }
@@ -189,15 +194,11 @@ main {
 
 .footer {
   font-size: 20px;
+  border-style: double;
   display: flex;
   flex-direction: column;
   margin-top: 40px;
-  height: auto;
-  background-color: pink;
-  text-align: center;
-  font-style: italic;
-  column-gap: 20px;
-  justify-content: center;
+  position: relative;
 }
 
 .footer_form {

@@ -2,26 +2,27 @@
     font-size: 40px;
     margin: 40px;
     font-weight: bold;
-  }
   
-  .subtitulos__2 {
+  
+  &__2 {
     font-size: 40px;
     padding: 60px;
-    text-align: center;
-  }
-  .subtitulos_parrafo{
+    text-align: center;}
+  
+  &_parrafo{
    text-align: center;
-   font-size: 25px;
-  }
-  .subtitulos__fabrica{
+   font-size: 25px;}
+  
+  &__fabrica{
     text-align: center;
     padding: 15px;
   }
-  .Subtitulos__fabrica--ubicacion{
+  &__fabrica--ubicacion{
     text-align: center;
     font-size: 25px;
     padding: 15px;
-  }
+  }}
+
   
 
   h4{
@@ -48,3 +49,7 @@
   .formulario-is__{
     text-align: center;
   }
+.img2{
+  width: 100px;
+  height: 100px;
+}
