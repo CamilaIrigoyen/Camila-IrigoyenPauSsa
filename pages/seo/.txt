@@ -1,6 +1,0 @@
-Se adecuaron todas las páginas, se agrego un carousel en la página de promociones , mapa en la página de contacto, se agrego un formulario de bootstrap en la página de inciiar sesión, etc.
-Se borraron todos los lorem y se puso relleno en los textos.
-Se acomodaron los titulos.
-Se acomodo el orden del logo según lo sugerido por el tutor.
-Agregue propiedades en la media queries de @media screen and (max-width: 600px).
-
