@@ -334,11 +334,8 @@ main {
   .div {
     position:relative;
   }
- .h3{
-  position: absolute;
-  top: 0;
-  left:0;
- }
+ 
+ 
   .grid {
     border: 4px solid black;
     display: grid;
@@ -348,7 +345,7 @@ main {
     font-style: italic;
     grid-template-areas: "foto1" "foto2" "foto3" "foto4" "foto5" "foto6" "foto7" "foto8" "foto9";
     object-fit: cover;
-    position:relative;
+   
   }
   .grid__hijo--1 {
     grid-area: foto1;
