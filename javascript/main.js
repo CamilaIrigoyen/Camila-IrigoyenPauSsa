@@ -68,24 +68,61 @@
 //                console.log("Esperamos que disfrutes tu compra");}
 
 
+     //genere un filtro para que el usuario elija que busca en la linea 73 a 85 y de la linea 87 a la 91 para que aumente el precio un 20%)
      
+     const productos= [
+          {id: 1, nombre:" vela aura" , precio: 550, envase: "vidrio"},
+          {id: 2, nombre: "pijama", precio: 6200, envase: "madera"},
+          {id: 3, nombre: "portavela", precio:580, envase:"vidrio"},
+          {id:4, nombre: "pantuflas", precio:2400, envase: "vidrio"},];
+          console.log(productos);
+
+          let ingreso= prompt ("Buscar producto");
      
-//      const productos= [
-//           {id: 1, nombre:" vela aura" , precio: 550, envase: "vidrio"},
-//           {id: 2, nombre: "pijama", precio: 6200, envase: "madera"},
-//           {id: 3, nombre: "portavela", precio:580, envase:"vidrio"},
-//           {id:4, nombre: "pantuflas", precio:2400, envase: "vidrio"},];
-//           console.log(productos);
-//           let ingreso= prompt ("Buscar producto");
-     
-//         console.log (productos);
-//         function filtrarproducto(arr, filtro){
-//           const filtrado = arr.filter((el) => {
-//                return el.nombre.includes(filtro);})
-//                return filtrado;}
+        console.log (productos);
+        function filtrarProducto(arr, filtro){
+          const elegido = arr.filter((el) => {
+               return el.nombre.includes(filtro);})
+               return elegido;}
+
+               const elegido = filtrarProducto (productos, nombre);
+
+        function porPrecio (productos,precio); {
+          precio.productos.forEach ((element) => {(console.log (precio*1.20));
+            return el.precio;})}
+
+        
+
+        //como hacer que el usuario pase los parametros que no sea por prompt//
+              function vela(precio,aroma,cantidad){
+                this.precio=precio;
+                this.aroma=aroma;
+                this.cantidad=cantidad;
+               }
+               const nuevaVela= new vela(precio,aroma,cantidad);
+
+         function calcularDescuento(cantidad,precio){
+          if (cantidad>=4){
+                console.log("el valor final es "+valorDescuento);
+               }
+               else{
+                console.log("tu valor final es el mismo "+valorTotal);
+               }
+         }
+         function valorDescuento (cantidad,precio){
+          const valorTotal = precio  * cantidad;
+          return valorTotal;
+         }
+
+        
+
+
+        //  let valorDescuento= valorTotal-(precio-(precio*0.15));
+                     
+
           
-//           const productosFiltrados= filtrarproducto(productos,ingreso);
-//           console.log(productosFiltrados);
+          const productosFiltrados= filtrarproducto(productos,ingreso);
+          console.log(productosFiltrados);
 
           //probando acceder a cambiar las etiquetas dentro de js//
           const h3= document.getElementsByTagName("h3");
@@ -95,8 +132,37 @@
 
           console.dir(document.head)
 
-        function agregarElemento(){
-         let createElement = document.createElement ("p");
-         createElement.innerHTML= "Inscribite en nuestras promociones ingresando tu correo , todos los viernes lanzamos descuentos";
-         document.body.append(promociones)}
-    
+         let h4 = document.getElementById("descuento");
+         console.log(h4);
+        //pensado para la promocion del dia del amigo//
+         const velas= [
+          {id: 1, nombre:" vela aura" , precio: 550, aroma: "frutas tropicales"},
+          {id: 2, nombre: "vela paz", precio: 520, aroma: "fresa"},
+          {id: 3, nombre: "vela amiga", precio:580, aroma: "vainilla"},];
+          console.log(velas)
+
+          const PromoVelas = velas.map(el => {
+            return el.precio - (1.40);
+          });
+
+         
+          console.log(PromoVelas);
+
+         //pensado para el carrito cuando aprete en comprar//
+         const btnComprar= document.querySelectorAll("#comprar"); 
+
+         let carrito = [];
+
+         function agregarCarrito (arr,filtro) {
+          let miCarrito= arr.push ((el) => { return el.nombre==(filtro)
+          return miCarrito;})}
+
+          btnComprar.addEventListener("click", ()=>{
+           agregarCarrito(arr,filtro);
+          return agregarCarrito })
+
+
+                    
+         
+         
+
