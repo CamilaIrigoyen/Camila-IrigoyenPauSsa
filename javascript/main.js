@@ -85,9 +85,9 @@
                return el.nombre.includes(filtro);})
                return elegido;}
 
-               const elegido = filtrarProducto (productos, nombre);
+               const elegido = filtrarProducto (productos, ingreso);
 
-        function porPrecio (productos,precio); {
+        function porPrecio (productos,precio){
           precio.productos.forEach ((element) => {(console.log (precio*1.20));
             return el.precio;})}
 
@@ -155,11 +155,11 @@
 
          function agregarCarrito (arr,filtro) {
           let miCarrito= arr.push ((el) => { return el.nombre==(filtro)
-          return miCarrito;})}
+         console.log (agregarCarrito);})}
 
           btnComprar.addEventListener("click", ()=>{
            agregarCarrito(arr,filtro);
-          return agregarCarrito })
+           miCarrito (productos) })
 
 
                     
