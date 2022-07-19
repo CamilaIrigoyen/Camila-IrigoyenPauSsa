@@ -93,13 +93,28 @@
 
         
 
-        //como hacer que el usuario pase los parametros que no sea por prompt//
+    
+
+        const inputPrecio= document.getElementById ("precio");
+        const inputAroma= document.getElementById ("aroma");
+        const inputCantidad= document.getElementById ("cantidad");
+        const botonCrearVela = document.querySelector("#simulador")
+
+
               function vela(precio,aroma,cantidad){
                 this.precio=precio;
                 this.aroma=aroma;
                 this.cantidad=cantidad;
                }
                const nuevaVela= new vela(precio,aroma,cantidad);
+
+botonCrearVela.addEventListener('click', () => {
+
+   const nuevaVela = new vela(inputAroma.value, inputPrecio.value , inputCantidad.value);
+
+   console.log(vela)
+
+})
 
          function calcularDescuento(cantidad,precio){
           if (cantidad>=4){
@@ -121,7 +136,7 @@
                      
 
           
-          const productosFiltrados= filtrarproducto(productos,ingreso);
+          const productosFiltrados= filtrarProducto(productos,ingreso);
           console.log(productosFiltrados);
 
           //probando acceder a cambiar las etiquetas dentro de js//
@@ -157,9 +172,9 @@
           let miCarrito= arr.push ((el) => { return el.nombre==(filtro)
          console.log (agregarCarrito);})}
 
-          btnComprar.addEventListener("click", ()=>{
+          btnComprar.addEventListener; ("click", ()=>{
            agregarCarrito(arr,filtro);
-           miCarrito (productos) })
+           HTMLAllCollection.item(filtro);})
 
 
                     
