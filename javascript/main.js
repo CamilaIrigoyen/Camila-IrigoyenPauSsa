@@ -18,11 +18,25 @@
 //  let usuario = prompt ("ingresa tu correo");
 //  let contraseña =prompt ("ingresa tu clave");
 
-// if ((usuario !=="") && (contraseña !==""))
-// {console.log ("Bienvenido a la tienda");}
-// else{
-//     console.log("campos requeridos");
-// }
+const usuario = document.getElementById("nombre"), mail= document.getElementById("correo"), contraseña= document.getElementById ("exampleInputPassword1"), checkbox=document.getElementById("exampleCheck1"), btnEnviar = document.getElementById("enviar");
+
+
+if ((usuario !=="") && (contraseña !=="") && (mail !==""))
+{console.log ("Bienvenido a la tienda");}
+else{
+    console.log("campos requeridos");
+}
+
+btnEnviar.addEventListener("click", respuestaEnviar);
+function respuestaEnviar() {
+  console.log ("Su usuario fue creado con exito");
+}
+
+localStorage.setItem ("credenciales", "Ingrese sus credenciales");
+let mensaje = localStorage.getItem(credenciales)
+
+
+
 // // // //pensado para el carrito de compras//
 // let opción= prompt("Ingresa una opción \n 1-transferencia bancaria \n 2-mercado pago \n 3-cuenta dni \n 4-tarjeta de crédito o débito \n 5-cuotas \n");
 // while(opción !=="0"){
@@ -172,12 +186,13 @@ botonCrearVela.addEventListener('click', () => {
           let miCarrito= arr.push ((el) => { return el.nombre==(filtro)
          console.log (agregarCarrito);})}
 
-          btnComprar.addEventListener; ("click", ()=>{
-           agregarCarrito(arr,filtro);
-           HTMLAllCollection.item(filtro);})
+          // btnComprar.addEventListener; ("click", ()=>{
+          //  agregarCarrito(arr,filtro);
+          //  HTMLAllCollection.item(filtro);})
 
 
                     
          
          
-
+ 
+          btnComprar.addEventListener; ("click",agregarCarrito);
