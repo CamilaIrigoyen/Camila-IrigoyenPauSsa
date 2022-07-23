@@ -18,23 +18,6 @@
 //  let usuario = prompt ("ingresa tu correo");
 //  let contraseña =prompt ("ingresa tu clave");
 
-const usuario = document.getElementById("nombre"), mail= document.getElementById("correo"), contraseña= document.getElementById ("exampleInputPassword1"), checkbox=document.getElementById("exampleCheck1"), btnEnviar = document.getElementById("enviar");
-
-
-if ((usuario !=="") && (contraseña !=="") && (mail !==""))
-{console.log ("Bienvenido a la tienda");}
-else{
-    console.log("campos requeridos");
-}
-
-btnEnviar.addEventListener("click", respuestaEnviar);
-function respuestaEnviar() {
-  console.log ("Su usuario fue creado con exito");
-}
-
-localStorage.setItem ("credenciales", "Ingrese sus credenciales");
-let mensaje = localStorage.getItem(credenciales)
-
 
 
 // // // //pensado para el carrito de compras//
@@ -91,7 +74,7 @@ let mensaje = localStorage.getItem(credenciales)
           {id:4, nombre: "pantuflas", precio:2400, envase: "vidrio"},];
           console.log(productos);
 
-          let ingreso= prompt ("Buscar producto");
+          // let ingreso= prompt ("Buscar producto");
      
         console.log (productos);
         function filtrarProducto(arr, filtro){
