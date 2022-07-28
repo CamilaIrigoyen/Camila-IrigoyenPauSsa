@@ -8,4 +8,7 @@ else {console.log("Te esperamos")};
 }
 
 
-botonPromo.addEventListener("click",enviarPromo(promociones.value));
+botonPromo.addEventListener("click",(e) =>{
+    e.preventDefault()
+enviarPromo(promociones.value)});
+

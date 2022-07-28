@@ -5,31 +5,37 @@ let monto= document.getElementById ("valor");
 let botonSimulador= document. querySelector("#simulador");
 const botonSaldo =document.getElementById ("valor");
 
+
+
 function CreaTuVela (aroma,cantidad,precio){
     this.aroma= aroma;
     this.cantidad= cantidad;
     this.precio=precio;
 }
 
-const vela1 = new CreaTuVela (this.aroma,this.cantidad,this.precio);
+const vela1 = new CreaTuVela (aroma,cantidad,precio);
+return vela1;
 
 
 botonSimulador.addEventListener("click", () => {
-   CreaTuVela(aroma.value,cantidad.value,precio.value);
-})
+    CreaTuVela (this.aroma,this.cantidad,this.precio);
+});
 
 const velas= []; 
-velas.push(vela1);
-console.log(velas);
+
+function agregarVela (vela1){
+    velas.push(vela1)
+}
 
 
 
-function valorFinal () {if(cantidad>4){console.log("Pagas" + valorDescuento);}
+
+function valorFinal () {if(cantidad>4){console.log("Pagas" + valorDescuento());}
 else {console.log(valorTotal);}
 
 }
 
-function multiplicar (){
+function multiplicar (precio,cantidad){
     let valorTotal= precio*cantidad;
     return multiplicar
 }

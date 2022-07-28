@@ -14,8 +14,10 @@ function validar ()
 else {console.log("Campos obligatorios")};
 }
 
-botonEnviar.addEventListener("click",()=> {
+botonEnviar.addEventListener("click",(e)=> {
+e.preventDefault()
     validar(mail.value,contraseña.value)
+    
 });
 
  function guardar () {
