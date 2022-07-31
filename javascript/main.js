@@ -1,20 +1,16 @@
 
-// // // //pensado para el carrito de compras//
-// let opción= prompt("Ingresa una opción \n 1-transferencia bancaria \n 2-mercado pago \n 3-cuenta dni \n 4-tarjeta de crédito o débito \n 5-cuotas \n");
-// while(opción !=="0"){
-//     
 
-     //genere un filtro para que el usuario elija que busca en la linea 73 a 85 y de la linea 87 a la 91 para que aumente el precio un 20%)
-     
-     const productos= [
-          {id: 1, nombre:" vela aura" , precio: 550, envase: "vidrio",descripcion: "aroma de vainilla",imagen:"./imagenes/vela aura.jpg"},
+      const productos= [
+           {id: 1, nombre:" vela aura" , precio: 550, envase: "vidrio",descripcion: "aroma de vainilla",imagen:"./imagenes/vela aura.jpg"},
           {id: 2, nombre: "vela vanina", precio: 620, envase: "madera",descripcion:"vela de soja aroma floral", imagen:"./imagenes/vela aromatica.jpg"},
-          {id: 3, nombre: "portavela", precio:580, envase:"vidrio", descripcion:"ideal para decorar tus espacios",imagen:"./imagenes/portavela.jpeg"},
+         {id: 3, nombre: "portavela", precio:580, envase:"vidrio", descripcion:"ideal para decorar tus espacios",imagen:"./imagenes/portavela.jpeg"},
           {id:4, nombre: "pantuflas", precio:2400, descripcion:"Súper cómodas y calentitas , ideales para pasar el invierno", imagen:"./imagenes/pantuflas.jpg"},];
-          console.log(productos);
+           console.log(productos);
 
-          const seccionProductos = document.getElementById("productos");
-
+          
+          const Tucarrito = document.getElementById("carrito");
+          
+       
           
 
           for (item of productos) {
@@ -28,7 +24,7 @@
                     <h5 class="card-title">${item.nombre}</h5>
                     <img src="${item.imagen}" class="card-img-top imgp" alt="paz">
                       <p class="card-text">${item.descripcion}</p>
-                      <button class="btn btn-primary" onclick="agregarCarrito(${item.id})">Comprar $${item.precio}</span>
+                      <button class="btn btn-primary" id="botonComprar" onclick="agregarCarrito(${item.id})">Comprar $${item.precio}</button>
                   </div>
                 </div>
               </div>
@@ -37,20 +33,99 @@
             seccionProductos.appendChild(htmlProducto);
           }
 
-          let carrito =[];
-          console.log(carrito);
+        let carrito =[];
+        console.log(carrito);
 
-          let botonComprar= document.getElementById ("comprar");
+          let compras= document.getElementById ("botonComprar");
 
-          function agregarCarrito(productos){
-            carrito.push (productos)
-            return agregarCarrito};
+          compras.addEventListener ("click", (e) =>{
+          agregarCarrito();
+          mostrarCarrito();
+          });
+
+          function agregarCarrito(id){
+            let productoAComprar = productos.find((el) => el.id == id) //busco el producto//
+            carrito.push (productoAComprar) //agrego el producto al carrito//
+            mostrarCarrito();} //muestro el carrito//
+        
+            function mostrarCarrito() {
+              const seccionCarrito = document.getElementById("carritoProductos");
+              
+              seccionCarrito.innerHTML = "" //lo limpio para que no se dupliquen//
+              for (item of carrito) { //recorro el carrito//
+                const htmlProducto = document.createElement("div");
+                htmlProducto.classList.add("row");
+            
+                htmlProducto.innerHTML = `
+                            <div class="col-md-12">
+                              <div class="card">
+                                <div class="card-body img-fluid">
+                                  <h5 class="card-title">${item.nombre}</h5>
+                                  <img src="${item.imagen}" class="card-img-top imgp" alt="paz">
+                                    <p class="card-text">${item.descripcion}</p>
+                                    <button class="btn btn-primary" onclick="quitarCarrito(${item.id})">quitar del carrito</button>
+                                </div>
+                              </div>
+                            </div>
+                          `;
+                  seccionCarrito.appendChild(htmlProducto);
+              }}
+            
+       
+        //para vaciar carrito
+            function quitarCarrito(id) {
+              let productoAComprar = productos.find((el) => el.id == id);
+              carrito.splice(carrito.indexOf(productoAComprar), 1);
+              mostrarCarrito()
+            }
+           
+          
+          const seccionProductos = document.getElementById("productos");
+          
+          for (item of productos) {
+            const htmlProducto = document.createElement("div");
+            htmlProducto.classList.add("row");
+          
+            htmlProducto.innerHTML = `
+                        <div class="col-md-12">
+                          <div class="card">
+                            <div class="card-body img-fluid">
+                              <h5 class="card-title">${item.nombre}</h5>
+                                <p class="card-text">${item.descripcion}</p>
+                                <button class="btn btn-primary" onclick="agregarCarrito(${item.id})">Comprar $${item.precio}</span>
+                            </div>
+                          </div>
+                        </div>
+                      `;
+          
+            seccionProductos.appendChild(htmlProducto);
+          }
+                    
+
+
+// const seccionProductos = document.getElementById("productos");
+
+// for (item of productos) {
+//   const htmlProducto = document.createElement("div");
+//   htmlProducto.classList.add("row");
+
+//   htmlProducto.innerHTML = `
+//               <div class="col-md-12">
+//                 <div class="card">
+//                   <div class="card-body img-fluid">
+//                     <h5 class="card-title">${item.nombre}</h5>
+//                       <p class="card-text">${item.descripcion}</p>
+//                       <button class="btn btn-primary" onclick="agregarCarrito(${item.id})">Comprar $${item.precio}</span>
+//                   </div>
+//                 </div>
+//               </div>
+//             `;
+
+//   seccionProductos.appendChild(htmlProducto);
+// }
+            
          
-         
-        botonComprar.addEventListener("click", () => {
-          let nuevosProductos = new Producto (nombre,precio,descripcion,imagen);
-   agregarCarrito(productos);
-        });
+   
          
 // function elegirPago (arr,filtro) {
 //   let metodoPago = arr.filter ((el) => {switch(filtro) {
@@ -114,25 +189,19 @@
 //           console.log(productosFiltrados);
 
           //probando acceder a cambiar las etiquetas dentro de js//
-          let h3= document.getElementsByTagName("h3");
-          console.log(h3);
+        //   let h3= document.getElementsByTagName("h3");
+        //   console.log(h3);
 
-          h3[0].innerHTML= "<h3>Te mostramos en lo que nos destacamos<br><br><p>Hacete un mimo y autoregalate alguno de nuestros productos</p></h3>"
+        //   h3[0].innerHTML= "<h3>Te mostramos en lo que nos destacamos<br><br><p>Hacete un mimo y autoregalate alguno de nuestros productos</p></h3>"
 
-          console.dir(document.head)
+        //   console.dir(document.head)
 
-         let h4 = document.getElementById("descuento");
-         console.log(h4);
+        //  let h4 = document.getElementById("descuento");
+        //  console.log(h4);
         
-         //pensado para el carrito cuando aprete en comprar//
-         const btnComprar= document.querySelectorAll("#comprar"); 
-
         
 
-          // btnComprar.addEventListener; ("click", ()=>{
-          //  agregarCarrito(arr,filtro);
-          //  HTMLAllCollection.item(filtro);})
-
+        
 
                     
          

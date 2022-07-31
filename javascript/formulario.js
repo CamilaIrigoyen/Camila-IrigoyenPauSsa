@@ -9,9 +9,19 @@ let botonEnviar= document.getElementById ("boton1");
 
 
 function validar () 
-{if ((mail !=="") && (contraseña !==""))
-{console.log ("Bienvenido a PauSsa");}
-else {console.log("Campos obligatorios")};
+{if ((mail.value !=="") && (contraseña.value !==""))
+{Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Bienvenido a Paussa',
+    showConfirmButton: false,
+    timer: 1500
+  })}
+else Swal.fire({
+    icon: 'error',
+    title: 'Oops...',
+    text: 'Campos obligatorios!',
+  });
 }
 
 botonEnviar.addEventListener("click",(e)=> {
