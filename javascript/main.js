@@ -75,10 +75,11 @@ const productos= [
             }
            
           
-         
+            const seccionProductos = document.getElementById("productos");
+                    
             
           for (item of productos) {
-            seccionProductos.appendChild(htmlProducto);
+            
             const htmlProducto = document.createElement("div");
             htmlProducto.classList.add("row");
           
@@ -93,11 +94,11 @@ const productos= [
                           </div>
                         </div>
                       `;
+                      seccionProductos.appendChild(htmlProducto);
           
             
           }
-          const seccionProductos = document.getElementById("productos");
-                    
+        
 
 
 // const seccionProductos = document.getElementById("productos");
