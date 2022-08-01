@@ -1,7 +1,7 @@
 let buscoProducto = document.getElementById ("buscar");
 let botonBuscar = document.getElementById ("encontrar");
 
-const productos = [{
+const productosBuscado = [{
     id: 1,
     nombre: " vela aura",
     precio: 550,
@@ -40,8 +40,8 @@ const productos = [{
   }
  
 
-  let ProductoEncontrado = buscarProducto (productos,buscoProducto.value);
-  console.log(productos);
+  let ProductoEncontrado = buscarProducto (productosBuscado,buscoProducto.value);
+  console.log(productosBuscado);
   console.log(ProductoEncontrado);
 
 botonBuscar.addEventListener ("click", (e)=> {

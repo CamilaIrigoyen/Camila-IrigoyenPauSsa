@@ -1,6 +1,4 @@
-
-
-      const productos= [
+const productos= [
            {id: 1, nombre:" vela aura" , precio: 550, envase: "vidrio",descripcion: "aroma de vainilla",imagen:"./imagenes/vela aura.jpg"},
           {id: 2, nombre: "vela vanina", precio: 620, envase: "madera",descripcion:"vela de soja aroma floral", imagen:"./imagenes/vela aromatica.jpg"},
          {id: 3, nombre: "portavela", precio:580, envase:"vidrio", descripcion:"ideal para decorar tus espacios",imagen:"./imagenes/portavela.jpeg"},
@@ -9,10 +7,7 @@
 
           
           const Tucarrito = document.getElementById("carrito");
-          
-       
-          
-
+          seccionProductos.appendChild(htmlProducto);
           for (item of productos) {
             const htmlProducto = document.createElement("div");
             htmlProducto.classList.add("row");
@@ -30,7 +25,7 @@
               </div>
             `;
           
-            seccionProductos.appendChild(htmlProducto);
+            
           }
 
         let carrito =[];
@@ -80,9 +75,10 @@
             }
            
           
-          const seccionProductos = document.getElementById("productos");
-          
+         
+            
           for (item of productos) {
+            seccionProductos.appendChild(htmlProducto);
             const htmlProducto = document.createElement("div");
             htmlProducto.classList.add("row");
           
@@ -98,8 +94,9 @@
                         </div>
                       `;
           
-            seccionProductos.appendChild(htmlProducto);
+            
           }
+          const seccionProductos = document.getElementById("productos");
                     
 
 

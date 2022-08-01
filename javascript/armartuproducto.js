@@ -10,8 +10,10 @@ function CreaTuVela (aroma,cantidad,precio){
     this.aroma= aroma.value;
     this.cantidad= cantidad.value;
     this.precio=precio.value;
+
 }
 
+const vela1 = new CreaTuVela(aroma.value,cantidad.value,precio.value);
 
 
 botonSimulador.addEventListener("click", () => {
