@@ -91,17 +91,8 @@
         <div>
             <h4 class="text-decoration-underline">Velas aromáticas</h4>
             <p class="lead">Nuestras velas presentan un tiempo de combustión prolongado, ecológico, sin humo, y sin goteo.</p>
-            <div class="input-group mb-3">
-              <span class="input-group-text">Contanos que aroma te gustaria</span>
-              <input type="text" id="aroma" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-            <div class="input-group mb-3"></div>
-            <span class="input-group-text">¿Cuantas llevarias?</span>
-            <input type="text"  class="form-control"  id="cantidad" aria-label="Dollar amount (with dot and two decimal places)">
-          <div class="input-group mb-3"></div>
-            <span class="input-group-text">¿Cuanto pagarias por ella?</span>
-            <input type="text" id="precio" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-            <button type="button" id="simulador"> Aceptar</button>
-              
+    
+             
             </div>
                 
         
@@ -114,27 +105,9 @@
         </main> 
          <section>
             <div class="row">
+   
               <div class="col-md-6">
                 <div class="card">
-                  <div class="card-body img-fluid">
-                    <h5 class="card-title">Pantuflas Paz</h5>
-                    <img src="./imagenes/pantuflas.jpg" class="card-img-top imgp" alt="paz">
-                    <p class="card-text"> Súper cómodas y calentitas , ideales para pasar el invierno.</p>
-                    <button class="btn btn-primary" id="botonComprar" > Comprar $3500</button>
-                
-                 
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card">
-                  <div class="card-body img-fluid">
-                    <h5 class="card-title">Pijama Victoria</h5>
-                    <img src="./imagenes/pijama gris.jpg" class="card-img-top imgp" alt="paz">
-                    <p class="card-text">Súper cómodo , se adapta al cuerpo.</p>
-                    <button class="btn btn-primary" id="botonComprar" > Comprar $6000</button>
-                   
-                  </div>
                   <section class="row">
                     <div class="col-md-6" id="productos"> <!-- Aca muestro los productos a comprar-->
                     </div>
@@ -151,6 +124,7 @@
                         <option value="cuentaDNI">Cuenta DNI</option>
                         <option value="mercadoPago">Mercado Pago</option>
                       </select>
+                      <button id="pagar" onclick="finalizarCompra()">Pagar</button>
                     </div>
                   </section>
                   
@@ -180,7 +154,7 @@
     <script src="javascript/buscar.js"></script>
     <script src="javascript/main.js"></script>
     <script src="javascript/footer.js"></script>
-    <script src="javascript/armartuproducto.js"></script>
-    <script src="javascript/carrito.js"></script>
+
+
 </body>
 </html>

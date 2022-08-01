@@ -40,12 +40,13 @@ const productosBuscado = [{
   }
  
 
-  let ProductoEncontrado = buscarProducto (productosBuscado,buscoProducto.value);
-  console.log(productosBuscado);
-  console.log(ProductoEncontrado);
+
 
 botonBuscar.addEventListener ("click", (e)=> {
-    buscarProducto();
+  e.preventDefault()
+    const resultadoEncontrado= buscarProducto(productosBuscado,buscoProducto.value) 
+    console.log(resultadoEncontrado);
+ 
 });
 
 

@@ -5,9 +5,9 @@ const productos= [
           {id:4, nombre: "pantuflas", precio:2400, descripcion:"Súper cómodas y calentitas , ideales para pasar el invierno", imagen:"./imagenes/pantuflas.jpg"},];
            console.log(productos);
 
-          
+           const seccionProductos = document.getElementById("productos");
           const Tucarrito = document.getElementById("carrito");
-          seccionProductos.appendChild(htmlProducto);
+         
           for (item of productos) {
             const htmlProducto = document.createElement("div");
             htmlProducto.classList.add("row");
@@ -31,12 +31,7 @@ const productos= [
         let carrito =[];
         console.log(carrito);
 
-          let compras= document.getElementById ("botonComprar");
-
-          compras.addEventListener ("click", (e) =>{
-          agregarCarrito();
-          mostrarCarrito();
-          });
+     
 
           function agregarCarrito(id){
             let productoAComprar = productos.find((el) => el.id == id) //busco el producto//
@@ -75,7 +70,7 @@ const productos= [
             }
            
           
-            const seccionProductos = document.getElementById("productos");
+           
                     
             
           for (item of productos) {
@@ -88,6 +83,7 @@ const productos= [
                           <div class="card">
                             <div class="card-body img-fluid">
                               <h5 class="card-title">${item.nombre}</h5>
+                              <img src="${item.imagen}" width=200 height=200></img>
                                 <p class="card-text">${item.descripcion}</p>
                                 <button class="btn btn-primary" onclick="agregarCarrito(${item.id})">Comprar $${item.precio}</span>
                             </div>
@@ -97,6 +93,26 @@ const productos= [
                       seccionProductos.appendChild(htmlProducto);
           
             
+          }
+        
+          function finalizarCompra() {
+            if(carrito.length > 0){
+              Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Compra realizada con éxito',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            } else {
+              Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'No hay ningnu articulo para comprar',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            }
           }
         
 
