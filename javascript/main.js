@@ -67,27 +67,6 @@ const productos= [
               let productoAComprar = productos.find((el) => el.id == id);
               carrito.splice(carrito.indexOf(productoAComprar), 1);
               mostrarCarrito()
-       
-          for (item of productos) {
-            
-            const htmlProducto = document.createElement("div");
-            htmlProducto.classList.add("row");
-          
-            htmlProducto.innerHTML = `
-                        <div class="col-md-12">
-                          <div class="card">
-                            <div class="card-body img-fluid">
-                              <h5 class="card-title">${item.nombre}</h5>
-                              <img src="${item.imagen}" width=200 height=200></img>
-                                <p class="card-text">${item.descripcion}</p>
-                                <button class="btn btn-primary" onclick="agregarCarrito(${item.id})">Comprar $${item.precio}</span>
-                            </div>
-                          </div>
-                        </div>
-                      `;
-                      seccionProductos.appendChild(htmlProducto);
-          }
-            
           }
         
           function finalizarCompra() {
@@ -110,12 +89,62 @@ const productos= [
             }
           }
        
-   const elegirProductos= async ()=>  {
-      const busqueda= await fetch ("./data/productos.json");
-      const data = await busqueda.json ();
-     console.log(data);
-    }
-    elegirProductos();
+
           
 
 
+    const elegirProductos = async () => {
+
+      const busqueda = await fetch("javascript/data/productos.json");
+    
+      const data = await busqueda.json();
+    
+      return data
+    
+    }
+    
+    elegirProductos().then(data => {
+    
+      productos = data;
+    
+      mostrarProductos()
+    
+    })
+    function mostrarProductos() {
+
+      for (item of productos) {
+    
+        const htmlProducto = document.createElement("div");
+    
+        htmlProducto.classList.add("row");
+    
+    ```    htmlProducto.innerHTML = ````
+    
+                  <div class="col-md-12">
+    
+                    <div class="card">
+    
+                      <div class="card-body img-fluid">
+    
+                        <h5 class="card-title">${item.nombre}</h5>
+    
+                        <img src="${item.imagen}" class="card-img-top imgp" alt="paz">
+    
+                          <p class="card-text">${item.descripcion}</p>
+    
+                          <button class="btn btn-primary" id="botonComprar" onclick="agregarCarrito(${[item.id](http://item.id)})">Comprar $${item.precio}</button>
+    
+                      </div>
+    
+                    </div>
+    
+                  </div>
+    
+                `;
+    
+        seccionProductos.appendChild(htmlProducto);
+    
+      }
+    
+    }
+    
