@@ -8,25 +8,27 @@ const productos= [
            const seccionProductos = document.getElementById("productos");
           const Tucarrito = document.getElementById("carrito");
          
-          for (item of productos) {
-            const htmlProducto = document.createElement("div");
-            htmlProducto.classList.add("row");
-          
-            htmlProducto.innerHTML = `
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-body img-fluid">
-                    <h5 class="card-title">${item.nombre}</h5>
-                    <img src="${item.imagen}" class="card-img-top imgp" alt="paz">
-                      <p class="card-text">${item.descripcion}</p>
-                      <button class="btn btn-primary" id="botonComprar" onclick="agregarCarrito(${item.id})">Comprar $${item.precio}</button>
-                  </div>
+       function mostrarProductos(){
+        for (item of productos) {
+          const htmlProducto = document.createElement("div");
+          htmlProducto.classList.add("row");
+        
+          htmlProducto.innerHTML = `
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body img-fluid">
+                  <h5 class="card-title">${item.nombre}</h5>
+                  <img src="${item.imagen}" class="card-img-top imgp" alt="paz">
+                    <p class="card-text">${item.descripcion}</p>
+                    <button class="btn btn-primary" id="botonComprar" onclick="agregarCarrito(${item.id})">Comprar $${item.precio}</button>
                 </div>
               </div>
-            `;
+            </div>
+          `;
+        
           
-            
-          }
+        }
+       }
 
         let carrito =[];
         console.log(carrito);
@@ -67,6 +69,7 @@ const productos= [
               let productoAComprar = productos.find((el) => el.id == id);
               carrito.splice(carrito.indexOf(productoAComprar), 1);
               mostrarCarrito()
+
           }
         
           function finalizarCompra() {
@@ -110,41 +113,5 @@ const productos= [
       mostrarProductos()
     
     })
-    function mostrarProductos() {
 
-      for (item of productos) {
-    
-        const htmlProducto = document.createElement("div");
-    
-        htmlProducto.classList.add("row");
-    
-    ```    htmlProducto.innerHTML = ````
-    
-                  <div class="col-md-12">
-    
-                    <div class="card">
-    
-                      <div class="card-body img-fluid">
-    
-                        <h5 class="card-title">${item.nombre}</h5>
-    
-                        <img src="${item.imagen}" class="card-img-top imgp" alt="paz">
-    
-                          <p class="card-text">${item.descripcion}</p>
-    
-                          <button class="btn btn-primary" id="botonComprar" onclick="agregarCarrito(${[item.id](http://item.id)})">Comprar $${item.precio}</button>
-    
-                      </div>
-    
-                    </div>
-    
-                  </div>
-    
-                `;
-    
-        seccionProductos.appendChild(htmlProducto);
-    
-      }
-    
-    }
     
