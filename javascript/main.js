@@ -37,15 +37,15 @@ let productos= [
      
 
           function agregarCarrito(id){
-            let productoAComprar = productos.find((el) => el.id == id) //busco el producto//
-            carrito.push (productoAComprar) //agrego el producto al carrito//
-            mostrarCarrito();} //muestro el carrito//
+            let productoAComprar = productos.find((el) => el.id == id)
+            carrito.push (productoAComprar) 
+            mostrarCarrito();}
         
             function mostrarCarrito() {
               const seccionCarrito = document.getElementById("carritoProductos");
               
-              seccionCarrito.innerHTML = "" //lo limpio para que no se dupliquen//
-              for (item of carrito) { //recorro el carrito//
+              seccionCarrito.innerHTML = "" 
+              for (item of carrito) {
                 const htmlProducto = document.createElement("div");
                 htmlProducto.classList.add("row");
             
@@ -65,7 +65,7 @@ let productos= [
               }}
             
        
-        //para vaciar carrito
+       
             function quitarCarrito(id) {
               let productoAComprar = productos.find((el) => el.id == id);
               carrito.splice(carrito.indexOf(productoAComprar), 1);
